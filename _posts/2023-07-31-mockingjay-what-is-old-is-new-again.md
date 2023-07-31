@@ -10,9 +10,9 @@ comments: true
 
 There has been quite a lot of rumor recently around the release of a piece of research that discuss a new (?) process injection technique that evades EDRs (what does that even mean?). For reference, these are the blog post I am referring to:
 
-https://www.bleepingcomputer.com/news/security/new-mockingjay-process-injection-technique-evades-edr-detection/
+- [New Mockingjay process injection technique evades EDR detection](https://www.bleepingcomputer.com/news/security/new-mockingjay-process-injection-technique-evades-edr-detection/)
 
-https://www.securityjoes.com/post/process-mockingjay-echoing-rwx-in-userland-to-achieve-code-execution
+- [Process Mockingjay: Echoing RWX In Userland To Achieve Code Execution](https://www.securityjoes.com/post/process-mockingjay-echoing-rwx-in-userland-to-achieve-code-execution)
 
 As consultants specialised in purple and red teaming, we get asked to analyse specific pieces of threat intelligence to achieve the following:
 
@@ -33,9 +33,9 @@ So, why is this useful and relevant?
 
 Recent advancements on the EDR world allowed these defensive software to gain more and more insights on the memory operations that processes perform. These advancements were necessary to combat process injection, one of the most common defense evasion techniques that is employed by red teamers (us lol) and actual threat actors. From a technical perspective, these advancements can be summarised in these three points:
 
-* More aggressive and robust memory scanners - https://www.cobaltstrike.com/blog/cobalt-strike-and-yara-can-i-have-your-signature/
+* More aggressive and robust memory scanners - [CobaltStrike - Can I have your signature](https://www.cobaltstrike.com/blog/cobalt-strike-and-yara-can-i-have-your-signature/)
 * Insights on memory operations using Threat Intelligence ETW
-* Insights on the callstack when an API call is made - https://www.elastic.co/security-labs/upping-the-ante-detecting-in-memory-threats-with-kernel-call-stacks
+* Insights on the callstack when an API call is made - [Upping the Ante: Detecting In-Memory Threats with Kernel Call Stacks](https://www.elastic.co/security-labs/upping-the-ante-detecting-in-memory-threats-with-kernel-call-stacks)
 
 Usually, to perform process injection, you need three actions:
 * Allocate memory
@@ -107,8 +107,8 @@ We can see that the code simply calls LoadLibrary and then copies the shellcode 
 
 This all works pretty well, however, given that we have plenty of spare space in the RWX blob, why not taking advantage of it? 
 
-When injecting complex C2 frameworks, we have to take into account the fact that we likely have a reflective loader. The reflective loader, as outlined by Fortra's researchers (https://www.cobaltstrike.com/blog/cobalt-strike-and-yara-can-i-have-your-signature/), is a prime target for detections. 
-For those who are not familiar with how the reflective loader works, I suggest to take a look at Stephen Fewer's original reflective loader project and read this: https://www.cobaltstrike.com/blog/revisiting-the-udrl-part-1-simplifying-development/
+When injecting complex C2 frameworks, we have to take into account the fact that we likely have a reflective loader. The reflective loader, as outlined by [Fortra's researchers](https://www.cobaltstrike.com/blog/cobalt-strike-and-yara-can-i-have-your-signature/), is a prime target for detections. 
+For those who are not familiar with how the reflective loader works, I suggest to take a look at Stephen Fewer's original reflective loader project and read [this](https://www.cobaltstrike.com/blog/revisiting-the-udrl-part-1-simplifying-development/). 
 
 In a nutshell, the reflective loader will perform a number of memory manipulation in order to allow the loading of the Cobalt Strike DLL completely in memory, this includes allocating new memory and writing to it. 
 
