@@ -8,7 +8,7 @@ comments: true
 
 # Attacking an EDR - Part 1
 
-DISCLAMER: This post was done in collaboration with Devid Lana. You can find his blog here: https://her0ness.github.io
+DISCLAMER: This post was done in collaboration with Devid Lana. You can find his blog here: [https://her0ness.github.io](https://her0ness.github.io)
 
 This post is the first of what - we hope - will be a long series of articles detailing some common flaws that can be found on modern EDR products. By no means this will be a complete reference, but will hopefully provide some practical tools to analyze these gargantuesque products and attempt to understand their functionalities from a black box perspective. 
 
@@ -18,11 +18,11 @@ Since our aim is not to name and shame and possibly avoid jail time, we will cal
 
 The methodology we followed was partially based on pre-existing research, and it’s impossible not to mention the MDSec’s research on Cylance. To summarise, we gathered previous research and identified the various places within the operating system where EDRs had some presence, both from a configuration and detection perspective:
 
-1) Injected DLLs
-2) Registry Keys
-3) Network Communication
-4) Install/Uninstall process
-5) File quarantine 
+- Injected DLLs
+- Registry Keys
+- Network Communication
+- Install/Uninstall process
+- File quarantine 
 
 At the time of this research, we did not perform any kernel-based analysis as we did not have those skills yet. Note that this first part was technically performed in 2020, so bear in mind that in the past three years the evolution of both offensive and defensive technologies had an extremely fast advancement. it is therefore not guaranteed that this technique will work with actual (2023) modern EDRs.
 
