@@ -6,7 +6,7 @@ tags: [red-teaming]
 comments: true
 ---
 
-# Attacking an EDR - Part 1
+## Introduction
 
 DISCLAMER: This post was done in collaboration with Devid Lana. You can find his blog here: [https://her0ness.github.io](https://her0ness.github.io)
 
