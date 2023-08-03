@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Attacking and EDR - Part 1
+title: Attacking an EDR - Part 1
 subtitle: For some fun and a fair bit of profit
 tags: [red-teaming]
 comments: true
 ---
 
-# Attacking and EDR - Part 1
+# Attacking an EDR - Part 1
 
 DISCLAMER: This post was done in collaboration with Devid Lana. You can find his blog here: https://her0ness.github.io
 
