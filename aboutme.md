@@ -4,16 +4,12 @@ title: About me
 subtitle: Who the hell are you and why you are talking to me
 ---
 
-My name is Riccardo and I currently work as a security consultant at F-Secure Consulting.
-The main activities that I'm involved in are:
+My name is Riccardo Ancarani and I currently work as a Principal Security Consultant at WithSecure.
+I'm the lead of our purple team practice but more ofen than not I am busy delivering red teams exercises for our more mature customers. I'm also responsible for managing our Active Directory Security Review practice.
 
-- Infrastructure pentesting
-- Active Directory Security assessments
-- Web app pentesting
-- [insert other boring stuff consultants have to do]
+I also hold the following security certifications:
 
-You can find me on twitter at @dottor_morte or LinkedIn!
+OSEP, OSCP, eCPTX, CREST CRT, eCMAP, eCTHP, eCPPT, CARTP, CRTE, CRTP, eWAPT, eMAPTOSEP, OSCP, eCPTX, CREST CRT, eCMAP, eCTHP, eCPPT, CARTP, CRTE, CRTP, eWAPT, eMAPT
 
-My GitHub profile kinda sucks because the interesting stuff cannot be released yet
+You can find me on twitter at @dottor_morte or [LinkedIn](https://www.linkedin.com/in/riccardo-ancarani/)!
 
-↑ that's what someone who's not able to code would say
