@@ -13,6 +13,12 @@ OSEP, OSCP, eCPTX, CREST CRT, eCMAP, eCTHP, eCPPT, CARTP, CRTE, CRTP, eWAPT, eMA
 
 You can find me on twitter at @dottor_morte or [LinkedIn](https://www.linkedin.com/in/riccardo-ancarani/)!
 
+I also offer pro bono consultancy for:
+
+- ONGs
+- Charities
+- Healthcare Institutions for scientific research 
+
 <!-- Google Calendar Appointment Scheduling begin -->
 <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2UeFlo_npwyQgKq2bNacgl9pfhD0qG1KyxU_3VAHk_leKyGZU0ye2UcX8NbLeb3gdoS3U1TgcY?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
 <!-- end Google Calendar Appointment Scheduling -->
