@@ -37,7 +37,7 @@ EDRs leveraged API hooking to inspect the arguments of various APIs that could b
 How to verify this hypothesis tho? We begun by searching all the processes within a VM with the product installed that did not load the DLL, a command similar to the following was used:
 
 ```
-tasklist /m /FO CSV | findstr /i /v STRANGETRINITY.DLL```
+tasklist /m /FO CSV | findstr /i /v STRANGETRINITY.DLL
 ```
 
 
@@ -66,7 +66,7 @@ Image Name                 	PID Modules
 ========================= ======== ============================================
 STRANGETRINITY.exe	6748 ntdll.dll,
 KERNEL32.DLL, KERNELBASE.dll,
-StrangeTrinity.dll, ADVAPI32.dll,
+ADVAPI32.dll,
 msvcrt.dll, sechost.dll, RPCRT4.dll,
 USER32.dll, win32u.dll, GDI32.dll,
 gdi32full.dll, msvcp_win.dll, ucrtbase.dll,
