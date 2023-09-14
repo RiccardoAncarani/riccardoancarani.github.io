@@ -53,13 +53,13 @@ Calling the method returns the status of the agent, the enabled security feature
 The following is a sample of the content:
 ```json
 {
-  "agent-unique-id": "8fb4b3fc-4576-11ee-be56-0242ac120002",
-  "agent-last-checkin": "2020-02-12",
-  "tenant-url": "https://tenant-management.strangetrinity.com",
-  "anti-tampering": "TRUE",
-  "installed-site": "site123456",
-  "agent-version": "2.0",
-  "some-other-random-params": "foobar"
+ "agent-unique-id": "8fb4b3fc-4576-11ee-be56-0242ac120002",
+ "agent-last-checkin": "2020-02-12",
+ "tenant-url": "https://tenant-management.strangetrinity.com",
+ "anti-tampering": "TRUE",
+ "installed-site": "site123456",
+ "agent-version": "2.0",
+ "some-other-random-params": "foobar"
 }
 ```
 
@@ -74,9 +74,7 @@ For simplicity, the attack was performed using an intercepting proxy, like BurpS
 The steps we took for the setup were the following:
 
 1. Add a new entry to the hosts file, resolving the DNS record of the management tenant to the localhost address
-
 2. Start a proxy on port 443, enabling invisible proxying
-
 3. Wait for the Agent check-in
 
 A better explanation on how to configure Burp (the software we actually used) this particular scenario can be found here: [Invisible proxying - PortSwigger](https://portswigger.net/burp/documentation/desktop/tools/proxy/invisible). Using the invisible proxying was necessary, as the EDR agent was not proxy-aware.
@@ -90,28 +88,28 @@ In response, it received another JSON containing a list of additional settings a
   
 ```json
 "config-data": {
-  "sendingData": [
-    "sent.data"
-  ], 
-  "some": "some",
-  "other": "other",
-  "params": "params",
-  "engineData":{
-    "os.data" : "data",
-    "status.data" : "data",
-    "behavioural.data" : "data",
-    "reputation.data" : "data",
-    "exploit.data" : "data",
-  }
-  "agent-unique-id": "8fb4b3fc-4576-11ee-be56-0242ac120002",
-  "threat-hash": "hash",
-  "scanner-module": "behavioural",
-  "anti-tampering": "TRUE",
-  "installed-site": "site123456",
-  "agent-version": "2.0",
-  "agent-logging-event": "true",
-  "kernel-protection": "true",
-  "some-other-random-params": "foobar"
+ "sendingData": [
+  "sent.data"
+ ], 
+ "some": "some",
+ "other": "other",
+ "params": "params",
+ "engineData":{
+  "os.data" : "data",
+  "status.data" : "data",
+  "behavioural.data" : "data",
+  "reputation.data" : "data",
+  "exploit.data" : "data",
+ }
+ "agent-unique-id": "8fb4b3fc-4576-11ee-be56-0242ac120002",
+ "threat-hash": "hash",
+ "scanner-module": "behavioural",
+ "anti-tampering": "TRUE",
+ "installed-site": "site123456",
+ "agent-version": "2.0",
+ "agent-logging-event": "true",
+ "kernel-protection": "true",
+ "some-other-random-params": "foobar"
 }
 ```
 
@@ -136,6 +134,7 @@ $object.StrangeTrinityAgentStatus()**
 ```
   
 The disclosure also included the code for a custom HTTPs proxy, however, considering that the same effect can be obtained with tools such as BurpSuite, publishing that would add no value to this research.
+
 # Outro
 
 As we can infer from the analysis, the communication between the tenant and the agent constitutes a pivotal aspect of any EDR solution. This communication not only allows the collection and transmission of telemetry from endpoints to a centralised cloud for further analysis but also enables swift implementation of configuration changes that need to be cascaded across the entire environment.
