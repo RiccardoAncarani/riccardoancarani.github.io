@@ -71,7 +71,9 @@ At this point we clearly had a problem, not being in possession of the private k
 - Installing a rogue certification authority on the compromised host and sign an arbitrary EXE with a certificate with the same subject as the vendor’s
 
 Unfortunately, none of the above worked (although they are valid tests that we encourage the reader to attempt).
-A new LOLBin? 
+
+### A new LOLBin? 
+
 STRANGETRINITY, as most top tier EDRs, have some sort of `live response` feature that allows responders to run arbitrary commands and execute scripts on a host they are analyzing. If this sounds like a Command and Control, it’s because it mostly is!
 
 Different products implement this feature in different ways, however, STRANGETRINITY had a dedicated process that was spawned when an analyst initiated a live response session from the main tenant. The program was essentially executing a powershell process and piping its output to a named pipe; we imagine that the output then got sent to the main agent process and ultimately redirected to the centralized tenant for the analyst to see.
@@ -91,7 +93,7 @@ With much surprise, we obtained an `Unshield approved` prompt, this looked like 
 ![](/assets/2023-11-07-attacking-an-edr-part-3/path1.png)
 
 
-## Appdomain Hijacking 
+### Appdomain Hijacking 
 
 The LOLBin part was interesting, but before submitting the vulnerability to the vendor we kept looking for other avenues. This was done mostly to increase our chances for the report to deliver the right message.
 
