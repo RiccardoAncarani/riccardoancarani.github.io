@@ -1,9 +1,7 @@
-# project
-_site
-.sass-cache
-.vagrant
+# Hugo build output
+public/
+resources/_gen/
+.hugo_build.lock
 
-# general
-.DS_Store
-Thumbs.db
-ehthumbs.db
+# local verification screenshots
+.shots/

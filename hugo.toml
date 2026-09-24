@@ -1,0 +1,22 @@
+baseurl = "https://riccardoancarani.github.io/"
+title = "Riccardo Ancarani"
+theme = "hugo-theme-console"
+locale = "en"
+
+[params]
+  description = "A blog for random thoughts. Sometimes for infosec as well."
+  animateStyle = "animated zoomIn fast"
+
+  [[params.navlinks]]
+  name = "posts/"
+  url = "posts/"
+
+  [[params.navlinks]]
+  name = "about/"
+  url = "about/"
+
+[permalinks]
+  posts = "/:year-:month-:day-:slug/"
+
+[markup.goldmark.renderer]
+  unsafe = true

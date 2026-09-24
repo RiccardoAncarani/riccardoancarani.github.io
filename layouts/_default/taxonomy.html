@@ -1,0 +1,45 @@
+{{ define "main" }}
+{{ $firstKind := "" }}
+{{ range first 1 .Pages }}{{ $firstKind = .Kind }}{{ end }}
+{{ if eq $firstKind "term" }}
+<h1>{{ .Title }}</h1>
+<br/>
+
+{{ with .Content }}{{ . }}{{ end }}
+
+{{ if .Pages }}
+<div class="posts-list">
+{{ range sort .Pages "Title" }}
+    <div class="post">
+        <p>
+            <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+            {{ len .Pages }} post{{ if ne (len .Pages) 1 }}s{{ end }}
+        </p>
+    </div>
+{{ end }}
+</div>
+{{ end }}
+
+{{ else }}
+<h1>{{ .Title }}</h1>
+<br/>
+
+{{ with .Content }}{{ . }}{{ end }}
+
+{{ if .Pages }}
+<div class="posts-list">
+{{ range sort .Pages "Date" "desc" }}
+    {{ if not .Params.private }}
+        <div class="post">
+            <p>
+                <div class="date">{{ .Date | time.Format ":date_medium" }}</div>
+                <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
+                {{ .Summary }}
+            </p>
+        </div>
+    {{ end }}
+{{ end }}
+</div>
+{{ end }}
+{{ end }}
+{{ end }}
