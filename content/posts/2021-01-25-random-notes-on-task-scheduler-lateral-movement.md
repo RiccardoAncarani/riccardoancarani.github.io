@@ -19,7 +19,7 @@ date: "2021-01-25"
 
 <!-- /MDTOC -->
 
-# Introduction
+## Introduction
 
 Reading FireEye's UNC2452 [writeup](https://www.fireeye.com/blog/threat-research/2020/12/evasive-attacker-leverages-solarwinds-supply-chain-compromises-with-sunburst-backdoor.html), I started to think about how to emulate them in purple teaming exercises. Despite the supply-chain bit is still a bit out of my reach, I noticed an interesting lateral movement vector that was used as part of that operation.
 

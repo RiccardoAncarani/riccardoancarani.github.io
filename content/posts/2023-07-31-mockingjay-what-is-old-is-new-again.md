@@ -7,8 +7,6 @@ twitter: "https://twitter.com/dottor_morte"
 date: "2023-07-31"
 ---
 
-# Mockingjay - What is old is new again
-
 There has been quite a lot of rumor recently around the release of a piece of research that discuss a new (?) process injection technique that evades EDRs (what does that even mean?). For reference, these are the blog post I am referring to:
 
 - [New Mockingjay process injection technique evades EDR detection](https://www.bleepingcomputer.com/news/security/new-mockingjay-process-injection-technique-evades-edr-detection/)

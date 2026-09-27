@@ -7,7 +7,7 @@ twitter: "https://twitter.com/dottor_morte"
 date: "2023-09-14"
 ---
 
-# Introduction - Where we left off
+## Introduction - Where we left off
 
 DISCLAMER: This post was done in collaboration with Devid Lana. You can find his blog here: [her0ness - Attacking an EDR Part 2](https://her0ness.github.io/2023-09-14-Attacking-an-EDR-Part-2/)
 

@@ -8,7 +8,7 @@ date: "2020-03-21"
 ---
 
 
-# Introduction
+## Introduction
 
 Nowadays, we see a continuous increase of the adoption of the Elasticsearch Logstash Kibana (ELK) stack for security monitoring purposes.
 The functionalities of the ELK stack fit nicely the purpose of a SIEM; in fact, within few minutes it is possible to spin up a cluster and deploy the data collectors on the endpoints.
